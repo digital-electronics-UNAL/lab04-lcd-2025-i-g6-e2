@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "src/lcd1602_text.v"
+`include "/home/kaiser/Documentos/lab_4_lcd_jjrm/lab04-lcd-2025-i-g6-e2/Parte_1/lcd1602_text.v"
 
 module LCD1602_controller_TB();
     reg clk;
