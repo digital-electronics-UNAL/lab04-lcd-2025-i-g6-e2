@@ -51,7 +51,7 @@ initial begin
     data <= 8'b0;
     clk_16ms <= 1'b0;
     clk_counter <= 'b0;                             // este txt se pasa a askki para poner un texto especifico, se puede usar un convertidor en linea para facilitar
-    $readmemh("path_to_txt.txt", static_data_mem);  // esto hace que el archivo txt llene la memoria con un numero de valores ¿aski? en hexadecimal, y depsues se va a la siguiente fila
+    $readmemh(/home/kaiser/Documentos/lab_4_lcd_jjrm/lab04-lcd-2025-i-g6-e2/Parte_1/data.txt, static_data_mem);  // esto hace que el archivo txt llene la memoria con un numero de valores ¿aski? en hexadecimal, y depsues se va a la siguiente fila
 	config_mem[0] <= LINES2_MATRIX5x8_MODE8bit; // esto sirve para guardar las configuraciones, llenar la memoria
 	config_mem[1] <= SHIFT_CURSOR_RIGHT; 
 	config_mem[2] <= DISPON_CURSOROFF;
@@ -102,7 +102,7 @@ always @(posedge clk_16ms) begin // este bloque define cuando se salta a idle co
         command_counter <= 'b0;
         data_counter <= 'b0;
 		  data <= 'b0;
-        $readmemh("path_to_txt.txt", static_data_mem);
+        $readmemh(/home/kaiser/Documentos/lab_4_lcd_jjrm/lab04-lcd-2025-i-g6-e2/Parte_1/data.txt, static_data_mem);
     end else begin
         case (next_state)
             IDLE: begin 
