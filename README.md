@@ -2,7 +2,8 @@
 # Lab04 - Visualización usando pantalla LCD 16x2
 
 # Integrantes
-
+Sergio Andrés Bolaños Penagos
+Johan Camilo Patiño Mogollón
 
 # Informe
 
